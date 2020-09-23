@@ -1,7 +1,7 @@
 import csv
 import re
 import time
-import hashlib
+from datetime import datetime
 import pandas as pd
 from typing import List
 
@@ -15,62 +15,59 @@ class Parser:
         self.filepath = filepath or Parser.DEFAULT_FILEPATH
         self.output_path = Parser.DEFAULT_OUTPUT
 
-    def remove_duplicates(self, method="BASIC"):
+    def get_date(self, date):
+        return datetime.strptime(date, "%H:%M:%S.%f")
+
+    def remove_duplicates(self, filepath=""):
         """
         Remove line duplicates
         :return:
         """
-        if method == "BASIC":
+        filepath = filepath or self.filepath
+        with open(filepath, "r") as file:
+            lines = file.readlines()
+            df = pd.DataFrame(data={"lines": lines, "splitted": [" ".join(line.split()[4:]) for line in lines]})
+            df.drop_duplicates(subset=["splitted"], inplace=True)
+            self.write_lines(df["lines"])
+
+    def reset_time(self, filepath=""):
+        filepath = filepath or self.filepath
+        with open(filepath, "r") as file:
+            lines = file.readlines()
+            df = pd.DataFrame(data={"lines": lines})
+            begin = datetime.strptime(lines[0].split()[1][:-1], "%H:%M:%S.%f")
+
+            def set_time(line):
+                line = line.split()
+                date = self.get_date(line[1][:-1])
+                line[1] = str(date - begin)
+                return " ".join(line)
+
+            df["lines"] = df["lines"].apply(set_time)
+            df["lines"] = df["lines"] + "\n"
+            self.write_lines(df["lines"])
+
+    def get_entity(self, entity_id, filepath=""):
+        filepath = filepath or "output.log"
+        with open(filepath, "r") as file:
+            lines = file.readlines()
             results = []
-            lines_seen = []
-            with open(self.filepath, "r") as file:
-                lines = file.readlines()
-                for i, line in enumerate(lines):
-                    l = " ".join(line.split()[4:])
-                    if l not in lines_seen[max(0, i-5000):]:
+            creation = "FULL_ENTITY - Creating ID={}".format(entity_id)
+            starting = 0
+            for i, line in enumerate(lines):
+                if creation in line:
+                    starting = i
+                    results.append(line)
+                if starting:
+                    if "Entity={}".format(entity_id) in line:
                         results.append(line)
-                    lines_seen.append(l)
-            self.write_lines(results)
-
-        elif method=="HASH":
-            results = []
-            hash_seen = []
-            with open(self.filepath, "r") as file:
-                lines = file.readlines()
-                for i, line in enumerate(lines):
-                    l = " ".join(line.split()[4:])
-                    hashval = int(hashlib.sha1(l.encode()).hexdigest(), 16)
-                    if hashval not in hash_seen[max(0, i - 5000):]:
+                    if "id={}".format(entity_id) in line:
                         results.append(line)
-                    hash_seen.append(hashval)
-            self.write_lines(results)
-
-        elif method=="PANDAS":
-            with open(self.filepath, "r") as file:
-                lines = file.readlines()
-                df = pd.DataFrame(data={"lines":lines, "splitted": [" ".join(line.split()[4:]) for line in lines]})
-                df.drop_duplicates(subset=["splitted"], inplace=True)
-                self.write_lines(df["lines"])
-                # df.to_csv("output.log", header=False, index=False, columns=["lines"], quoting=csv.QUOTE_NONE, escapechar='')
-
-    def get_duplicates(self):
-        """
-        Output the line present 2 times
-        :return:
-        """
-        results = []
-        lines_seen = []
-        with open(self.filepath, "r") as file:
-            for i, line in enumerate(file):
-                if i < 50000:
-                    l = " ".join(line.split()[4:])
-                    if l not in lines_seen[max(0, i - 10000):]:
-                        lines_seen.append(l)
-                    else:
-                        results.append(line)
-                else:
-                    break
-        self.write_lines(results)
+                    if i - starting > 1000:
+                        break
+        with open("entity_{}.log".format(entity_id), "w") as file:
+            file.writelines(results)
+        return results
 
     def write_lines(self, lines: List[str]):
         with open(self.output_path, "w") as file:
@@ -80,15 +77,8 @@ class Parser:
 p = Parser()
 
 start = time.time()
-p.remove_duplicates(method="PANDAS")
+p.remove_duplicates()
+# p.reset_time("output.log")
 print("PANDAS method took : ", time.time()-start, "s")
 
-# start = time.time()
-# p.remove_duplicates(method="BASIC")
-# print("BASIC method took : ", time.time()-start, "s")
-#
-# start = time.time()
-# p.remove_duplicates(method="HASH")
-# print("HASH method took : ", time.time()-start, "s")
 
-print("end.")

@@ -1,0 +1,40 @@
+Si : XXX => valeur qui change à chaque fois
+
+Détection de début du combat:
+D 14:03:20.8593382 GameState.DebugPrintPower() -
+    BLOCK_START
+    BlockType=TRIGGER Entity=[entityName=Faire glisser pour acheter id=XXX zone=PLAY zonePos=0 cardId=TB_BaconShop_DragBuy player=4]
+    EffectCardId=System.Collections.Generic.List`1[System.String]
+    EffectIndex=0
+    Target=0
+    SubOption=-1
+    TriggerKeyword=0
+
+Detection de creation d'entity:
+D 14:00:41.9717618 GameState.DebugPrintPower() -
+    FULL_ENTITY - Creating ID=XXX CardID=EX1_531 (-> voir id cards)
+
+Detection de dorée:
+    - CardId différent si golden
+
+Detection de changement d'attributs:
+D 14:17:54.9137990 GameState.DebugPrintPower() -     TAG_CHANGE Entity=6663 tag=TAUNT value=1
+D 14:17:54.9137990 GameState.DebugPrintPower() -     TAG_CHANGE Entity=6663 tag=DIVINE_SHIELD value=1
+D 14:11:05.0121026 GameState.DebugPrintPower() -     TAG_CHANGE Entity=3882 tag=DEATHRATTLE value=1 -> comment le connaitre ?
+D 14:17:54.9147952 GameState.DebugPrintPower() -     TAG_CHANGE Entity=6663 tag=HEALTH value=11
+D 14:17:54.9147952 GameState.DebugPrintPower() -     TAG_CHANGE Entity=6663 tag=ATK value=9
+
+Ajout d'un magnetic (Verifier):
+    - Creation d'une entite (le magnetic) ici menace replicate CardID=BOT_312e
+    - Fusion avec le magnetized en rattachant le magnetic avec le tag CREATOR et ATTACHED
+D 14:11:05.0121026 GameState.DebugPrintPower() -     FULL_ENTITY - Creating ID=3883 CardID=
+D 14:11:05.0121026 GameState.DebugPrintPower() -         tag=ENTITY_ID value=3883
+D 14:11:05.0121026 GameState.DebugPrintPower() -     SHOW_ENTITY - Updating Entity=3883 CardID=BOT_312e
+D 14:11:05.0121026 GameState.DebugPrintPower() -         tag=ATTACHED value=3882
+D 14:11:05.0121026 GameState.DebugPrintPower() -         tag=CREATOR value=3882
+
+Pour avoir les boards:
+    - detecter le debut du combat (block trigger avec cardId DragBuy)
+    - Detecter la creation des entites (minions) ennemi
+    - Modifier leur ATK et HEALTH si ils sont buffés
+    - Check des deathrattles

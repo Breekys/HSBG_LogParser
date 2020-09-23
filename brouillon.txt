@@ -1,0 +1,169 @@
+Trigger frist combat:
+    D 13:58:52.9635831 GameState.DebugPrintPower() -
+     BLOCK_START BlockType=TRIGGER
+     Entity=[entityName=Ench. de joueur 8 boutique CdB id=55 zone=PLAY zonePos=0 cardId=TB_BaconShop_8P_PlayerE player=4]
+     EffectCardId=System.Collections.Generic.List`1[System.String]
+     EffectIndex=12
+     Target=0
+     SubOption=-1
+     TriggerKeyword=0
+
+Trigger second combat:
+    D 14:00:41.9626699 GameState.DebugPrintPower() -
+    BLOCK_START BlockType=TRIGGER
+    Entity=[entityName=Faire glisser pour acheter id=548 zone=PLAY zonePos=0 cardId=TB_BaconShop_DragBuy player=4]
+    EffectCardId=System.Collections.Generic.List`1[System.String]
+    EffectIndex=0
+    Target=0
+    SubOption=-1
+    TriggerKeyword=0
+
+Triggers avant début du setup du combat, le dernier est celui ou se trouve le setup (creation des entity) (same time):
+    D 13:58:52.9615857 GameState.DebugPrintPower() -
+        BLOCK_START
+        BlockType=TRIGGER
+        Entity=[entityName=Ench. Vérification 3 pareils id=56 zone=PLAY zonePos=0 cardId=TB_BaconShop_3ofKindChecke player=4]
+        EffectCardId=System.Collections.Generic.List`1[System.String]
+        EffectIndex=2
+        Target=0
+        SubOption=-1
+        TriggerKeyword=0
+    D 13:58:52.9615857 GameState.DebugPrintPower() -
+        TAG_CHANGE Entity=[entityName=Ench. Vérification 3 pareils id=56 zone=PLAY zonePos=0 cardId=TB_BaconShop_3ofKindChecke player=4] tag=LAST_AFFECTED_BY value=56
+    D 13:58:52.9615857 GameState.DebugPrintPower() -
+        TAG_CHANGE Entity=[entityName=Ench. Vérification 3 pareils id=56 zone=PLAY zonePos=0 cardId=TB_BaconShop_3ofKindChecke player=4] tag=1068 value=4
+    D 13:58:52.9615857 GameState.DebugPrintPower() -
+        TAG_CHANGE Entity=[entityName=Ench. Vérification 3 pareils id=56 zone=PLAY zonePos=0 cardId=TB_BaconShop_3ofKindChecke player=4] tag=1068 value=0
+    D 13:58:52.9615857 GameState.DebugPrintPower() -
+        TAG_CHANGE Entity=[entityName=Ench. Vérification 3 pareils id=56 zone=PLAY zonePos=0 cardId=TB_BaconShop_3ofKindChecke player=4] tag=1037 value=4
+    D 13:58:52.9625840 GameState.DebugPrintPower() -
+        TAG_CHANGE Entity=[entityName=Ench. Vérification 3 pareils id=56 zone=PLAY zonePos=0 cardId=TB_BaconShop_3ofKindChecke player=4] tag=ZONE value=GRAVEYARD
+    D 13:58:52.9625840 GameState.DebugPrintPower() -
+        TAG_CHANGE Entity=[entityName=Ench. Vérification 3 pareils id=56 zone=PLAY zonePos=0 cardId=TB_BaconShop_3ofKindChecke player=4] tag=1234 value=11
+    D 13:58:52.9625840 GameState.DebugPrintPower() -
+        HIDE_ENTITY - Entity=[entityName=Ench. Vérification 3 pareils id=56 zone=PLAY zonePos=0 cardId=TB_BaconShop_3ofKindChecke player=4] tag=ZONE value=GRAVEYARD
+    D 13:58:52.9625840 GameState.DebugPrintPower() -
+        BLOCK_START BlockType=TRIGGER
+        Entity=[entityName=Garde des bananes id=253 zone=PLAY zonePos=0 cardId=TB_BaconShop_HP_038e player=4]
+        EffectCardId=System.Collections.Generic.List`1[System.String]
+        EffectIndex=0
+        Target=0
+        SubOption=-1
+        TriggerKeyword=0
+    D 13:58:52.9625840 GameState.DebugPrintPower() -
+        BLOCK_START BlockType=TRIGGER
+        Entity=[entityName=Ench. de joueur 8 boutique CdB id=55 zone=PLAY zonePos=0 cardId=TB_BaconShop_8P_PlayerE player=4]
+        EffectCardId=System.Collections.Generic.List`1[System.String]
+        EffectIndex=-1
+        Target=0
+        SubOption=-1
+        TriggerKeyword=0
+    D 13:58:52.9625840 GameState.DebugPrintPower() -
+            TAG_CHANGE Entity=GameEntity tag=1466 value=0
+    D 13:58:52.9625840 GameState.DebugPrintPower() -
+            TAG_CHANGE Entity=GameEntity tag=MISSION_EVENT value=115
+    D 13:58:52.9625840 GameState.DebugPrintPower() -
+        BLOCK_START BlockType=TRIGGER
+        Entity=[entityName=Gel id=249 zone=PLAY zonePos=0 cardId=TB_BaconShopLockAll_Button player=4]
+        EffectCardId=System.Collections.Generic.List`1[System.String]
+        EffectIndex=0
+        Target=0
+        SubOption=-1
+        TriggerKeyword=0
+    D 13:58:52.9635831 GameState.DebugPrintPower() -
+        BLOCK_START BlockType=TRIGGER
+        Entity=[entityName=Faire glisser pour acheter id=252 zone=PLAY zonePos=0 cardId=TB_BaconShop_DragBuy player=4]
+        EffectCardId=System.Collections.Generic.List`1[System.String]
+        EffectIndex=0
+        Target=0
+        SubOption=-1
+        TriggerKeyword=0
+    D 13:58:52.9635831 GameState.DebugPrintPower() -
+        BLOCK_START BlockType=TRIGGER
+        Entity=[entityName=Ench. de joueur 8 boutique CdB id=55 zone=PLAY zonePos=0 cardId=TB_BaconShop_8P_PlayerE player=4]
+        EffectCardId=System.Collections.Generic.List`1[System.String]
+        EffectIndex=12
+        Target=0
+        SubOption=-1
+        TriggerKeyword=0
+
+
+
+D 13:58:52.9615857 GameState.DebugPrintPower() - TAG_CHANGE Entity=[entityName=Lieutenant draconide id=254 zone=PLAY zonePos=1 cardId=BGS_039 player=4] tag=1196 value=0
+D 13:58:52.9615857 GameState.DebugPrintPower() - BLOCK_START BlockType=TRIGGER Entity=[entityName=Ench. Vérification 3 pareils id=56 zone=PLAY zonePos=0 cardId=TB_BaconShop_3ofKindChecke player=4] EffectCardId=System.Collections.Generic.List`1[System.String] EffectIndex=2 Target=0 SubOption=-1 TriggerKeyword=0
+D 13:58:52.9615857 GameState.DebugPrintPower() -     TAG_CHANGE Entity=[entityName=Ench. Vérification 3 pareils id=56 zone=PLAY zonePos=0 cardId=TB_BaconShop_3ofKindChecke player=4] tag=LAST_AFFECTED_BY value=56
+D 13:58:52.9615857 GameState.DebugPrintPower() -     TAG_CHANGE Entity=[entityName=Ench. Vérification 3 pareils id=56 zone=PLAY zonePos=0 cardId=TB_BaconShop_3ofKindChecke player=4] tag=1068 value=4
+D 13:58:52.9615857 GameState.DebugPrintPower() -     TAG_CHANGE Entity=[entityName=Ench. Vérification 3 pareils id=56 zone=PLAY zonePos=0 cardId=TB_BaconShop_3ofKindChecke player=4] tag=1068 value=0
+D 13:58:52.9615857 GameState.DebugPrintPower() -     TAG_CHANGE Entity=[entityName=Ench. Vérification 3 pareils id=56 zone=PLAY zonePos=0 cardId=TB_BaconShop_3ofKindChecke player=4] tag=1037 value=4
+D 13:58:52.9625840 GameState.DebugPrintPower() -     TAG_CHANGE Entity=[entityName=Ench. Vérification 3 pareils id=56 zone=PLAY zonePos=0 cardId=TB_BaconShop_3ofKindChecke player=4] tag=ZONE value=GRAVEYARD
+D 13:58:52.9625840 GameState.DebugPrintPower() -     TAG_CHANGE Entity=[entityName=Ench. Vérification 3 pareils id=56 zone=PLAY zonePos=0 cardId=TB_BaconShop_3ofKindChecke player=4] tag=1234 value=11
+D 13:58:52.9625840 GameState.DebugPrintPower() -     HIDE_ENTITY - Entity=[entityName=Ench. Vérification 3 pareils id=56 zone=PLAY zonePos=0 cardId=TB_BaconShop_3ofKindChecke player=4] tag=ZONE value=GRAVEYARD
+D 13:58:52.9625840 GameState.DebugPrintPower() - BLOCK_START BlockType=TRIGGER Entity=[entityName=Garde des bananes id=253 zone=PLAY zonePos=0 cardId=TB_BaconShop_HP_038e player=4] EffectCardId=System.Collections.Generic.List`1[System.String] EffectIndex=0 Target=0 SubOption=-1 TriggerKeyword=0
+D 13:58:52.9625840 GameState.DebugPrintPower() - BLOCK_START BlockType=TRIGGER Entity=[entityName=Ench. de joueur 8 boutique CdB id=55 zone=PLAY zonePos=0 cardId=TB_BaconShop_8P_PlayerE player=4] EffectCardId=System.Collections.Generic.List`1[System.String] EffectIndex=-1 Target=0 SubOption=-1 TriggerKeyword=0
+D 13:58:52.9625840 GameState.DebugPrintPower() -     TAG_CHANGE Entity=GameEntity tag=1466 value=0
+D 13:58:52.9625840 GameState.DebugPrintPower() -     TAG_CHANGE Entity=GameEntity tag=MISSION_EVENT value=115
+D 13:58:52.9625840 GameState.DebugPrintPower() - BLOCK_START BlockType=TRIGGER Entity=[entityName=Gel id=249 zone=PLAY zonePos=0 cardId=TB_BaconShopLockAll_Button player=4] EffectCardId=System.Collections.Generic.List`1[System.String] EffectIndex=0 Target=0 SubOption=-1 TriggerKeyword=0
+D 13:58:52.9635831 GameState.DebugPrintPower() - BLOCK_START BlockType=TRIGGER Entity=[entityName=Faire glisser pour acheter id=252 zone=PLAY zonePos=0 cardId=TB_BaconShop_DragBuy player=4] EffectCardId=System.Collections.Generic.List`1[System.String] EffectIndex=0 Target=0 SubOption=-1 TriggerKeyword=0
+D 13:58:52.9635831 GameState.DebugPrintPower() - BLOCK_START BlockType=TRIGGER Entity=[entityName=Ench. de joueur 8 boutique CdB id=55 zone=PLAY zonePos=0 cardId=TB_BaconShop_8P_PlayerE player=4] EffectCardId=System.Collections.Generic.List`1[System.String] EffectIndex=12 Target=0 SubOption=-1 TriggerKeyword=0
+
+
+
+
+D 14:01:51.5658820 GameState.DebugPrintPowerList() - Count=272
+D 14:01:51.5658820 GameState.DebugPrintPower() - TAG_CHANGE Entity=[entityName=Gardien des glyphes id=856 zone=PLAY zonePos=1 cardId=BGS_045 player=4] tag=1196 value=0
+D 14:01:51.5658820 GameState.DebugPrintPower() - BLOCK_START BlockType=TRIGGER Entity=[entityName=Ench. Vérification 3 pareils id=818 zone=PLAY zonePos=0 cardId=TB_BaconShop_3ofKindChecke player=4] EffectCardId=System.Collections.Generic.List`1[System.String] EffectIndex=2 Target=0 SubOption=-1 TriggerKeyword=0
+D 14:01:51.5658820 GameState.DebugPrintPower() -     TAG_CHANGE Entity=[entityName=Ench. Vérification 3 pareils id=818 zone=PLAY zonePos=0 cardId=TB_BaconShop_3ofKindChecke player=4] tag=LAST_AFFECTED_BY value=818
+D 14:01:51.5658820 GameState.DebugPrintPower() -     TAG_CHANGE Entity=[entityName=Ench. Vérification 3 pareils id=818 zone=PLAY zonePos=0 cardId=TB_BaconShop_3ofKindChecke player=4] tag=1068 value=4
+D 14:01:51.5658820 GameState.DebugPrintPower() -     TAG_CHANGE Entity=[entityName=Ench. Vérification 3 pareils id=818 zone=PLAY zonePos=0 cardId=TB_BaconShop_3ofKindChecke player=4] tag=1068 value=0
+D 14:01:51.5658820 GameState.DebugPrintPower() -     TAG_CHANGE Entity=[entityName=Ench. Vérification 3 pareils id=818 zone=PLAY zonePos=0 cardId=TB_BaconShop_3ofKindChecke player=4] tag=ZONE value=GRAVEYARD
+D 14:01:51.5668751 GameState.DebugPrintPower() -     TAG_CHANGE Entity=[entityName=Ench. Vérification 3 pareils id=818 zone=PLAY zonePos=0 cardId=TB_BaconShop_3ofKindChecke player=4] tag=1234 value=11
+D 14:01:51.5668751 GameState.DebugPrintPower() -     HIDE_ENTITY - Entity=[entityName=Ench. Vérification 3 pareils id=818 zone=PLAY zonePos=0 cardId=TB_BaconShop_3ofKindChecke player=4] tag=ZONE value=GRAVEYARD
+D 14:01:51.5668751 GameState.DebugPrintPower() -     TAG_CHANGE Entity=GameEntity tag=MISSION_EVENT value=117
+D 14:01:51.5668751 GameState.DebugPrintPower() - BLOCK_START BlockType=TRIGGER Entity=[entityName=Faire glisser pour acheter id=776 zone=PLAY zonePos=0 cardId=TB_BaconShop_DragBuy player=4] EffectCardId=System.Collections.Generic.List`1[System.String] EffectIndex=0 Target=0 SubOption=-1 TriggerKeyword=0
+
+
+D 14:03:20.8578198 GameState.DebugPrintPowerList() - Count=284
+D 14:03:20.8578198 GameState.DebugPrintPower() - TAG_CHANGE Entity=[entityName=Gardien de bronze id=1160 zone=PLAY zonePos=2 cardId=BGS_034 player=4] tag=1196 value=0
+D 14:03:20.8578198 GameState.DebugPrintPower() - BLOCK_START BlockType=TRIGGER Entity=[entityName=Ench. Vérification 3 pareils id=1119 zone=PLAY zonePos=0 cardId=TB_BaconShop_3ofKindChecke player=4] EffectCardId=System.Collections.Generic.List`1[System.String] EffectIndex=2 Target=0 SubOption=-1 TriggerKeyword=0
+D 14:03:20.8578198 GameState.DebugPrintPower() -     TAG_CHANGE Entity=[entityName=Ench. Vérification 3 pareils id=1119 zone=PLAY zonePos=0 cardId=TB_BaconShop_3ofKindChecke player=4] tag=LAST_AFFECTED_BY value=1119
+D 14:03:20.8578198 GameState.DebugPrintPower() -     TAG_CHANGE Entity=[entityName=Ench. Vérification 3 pareils id=1119 zone=PLAY zonePos=0 cardId=TB_BaconShop_3ofKindChecke player=4] tag=1068 value=4
+D 14:03:20.8578198 GameState.DebugPrintPower() -     TAG_CHANGE Entity=[entityName=Ench. Vérification 3 pareils id=1119 zone=PLAY zonePos=0 cardId=TB_BaconShop_3ofKindChecke player=4] tag=1068 value=0
+D 14:03:20.8578198 GameState.DebugPrintPower() -     TAG_CHANGE Entity=[entityName=Ench. Vérification 3 pareils id=1119 zone=PLAY zonePos=0 cardId=TB_BaconShop_3ofKindChecke player=4] tag=ZONE value=GRAVEYARD
+D 14:03:20.8588191 GameState.DebugPrintPower() -     TAG_CHANGE Entity=[entityName=Ench. Vérification 3 pareils id=1119 zone=PLAY zonePos=0 cardId=TB_BaconShop_3ofKindChecke player=4] tag=1234 value=11
+D 14:03:20.8588191 GameState.DebugPrintPower() -     HIDE_ENTITY - Entity=[entityName=Ench. Vérification 3 pareils id=1119 zone=PLAY zonePos=0 cardId=TB_BaconShop_3ofKindChecke player=4] tag=ZONE value=GRAVEYARD
+D 14:03:20.8593382 GameState.DebugPrintPower() -     TAG_CHANGE Entity=[entityName=Gel id=1080 zone=PLAY zonePos=0 cardId=TB_BaconShopLockAll_Button player=4] tag=TAG_SCRIPT_DATA_NUM_1 value=0
+D 14:03:20.8593382 GameState.DebugPrintPower() - BLOCK_START BlockType=TRIGGER Entity=[entityName=Faire glisser pour acheter id=1083 zone=PLAY zonePos=0 cardId=TB_BaconShop_DragBuy player=4] EffectCardId=System.Collections.Generic.List`1[System.String] EffectIndex=0 Target=0 SubOption=-1 TriggerKeyword=0
+
+
+
+
+
+
+Deathrattle deflect o bot avec le magnetic 3/1:
+D 14:11:05.5679190 GameState.DebugPrintPower() -     BLOCK_START BlockType=TRIGGER Entity=[entityName=Déflect-o-bot id=3882 zone=PLAY zonePos=2 cardId=BGS_071 player=12] EffectCardId=System.Collections.Generic.List`1[System.String] EffectIndex=0 Target=0 SubOption=-1 TriggerKeyword=DEATHRATTLE
+D 14:11:05.5679190 GameState.DebugPrintPower() -         FULL_ENTITY - Creating ID=4232 CardID=BOT_312t
+D 14:11:05.5689153 GameState.DebugPrintPower() -             tag=ENTITY_ID value=4232
+D 14:11:05.5689153 GameState.DebugPrintPower() -             tag=1254 value=3882
+D 14:11:05.5689153 GameState.DebugPrintPower() -         FULL_ENTITY - Creating ID=4233 CardID=BOT_312t
+D 14:11:05.5689153 GameState.DebugPrintPower() -             tag=ENTITY_ID value=4233
+D 14:11:05.5689153 GameState.DebugPrintPower() -         TAG_CHANGE Entity=[entityName=Rover de sécurité id=3902 zone=PLAY zonePos=7 cardId=BOT_218 player=12] tag=ZONE_POSITION value=7
+D 14:11:05.5689153 GameState.DebugPrintPower() -         TAG_CHANGE Entity=[entityName=Saurolisque enragé id=3896 zone=PLAY zonePos=6 cardId=BGS_075 player=12] tag=ZONE_POSITION value=6
+D 14:11:05.5689153 GameState.DebugPrintPower() -         TAG_CHANGE Entity=[entityName=Tisse-colère id=3894 zone=PLAY zonePos=5 cardId=BGS_004 player=12] tag=ZONE_POSITION value=5
+D 14:11:05.5689153 GameState.DebugPrintPower() -         TAG_CHANGE Entity=[entityName=Saurolisque enragé id=3885 zone=PLAY zonePos=4 cardId=BGS_075 player=12] tag=ZONE_POSITION value=4
+D 14:11:05.5689153 GameState.DebugPrintPower() -         FULL_ENTITY - Creating ID=4234 CardID=BOT_312t
+D 14:11:05.5699130 GameState.DebugPrintPower() -             tag=ENTITY_ID value=4234
+
+
+
+
+
+Magnetic
+
+FULL_ENTITY - Creating ID=3882 CardID=BGS_071
+D 14:11:05.0121026 GameState.DebugPrintPower() -         tag=ENTITY_ID value=3882
+D 14:11:05.0121026 GameState.DebugPrintPower() -     TAG_CHANGE Entity=3882 tag=DEATHRATTLE value=1
+D 14:11:05.0121026 GameState.DebugPrintPower() -     FULL_ENTITY - Creating ID=3883 CardID=
+D 14:11:05.0121026 GameState.DebugPrintPower() -         tag=ENTITY_ID value=3883
+D 14:11:05.0121026 GameState.DebugPrintPower() -     SHOW_ENTITY - Updating Entity=3883 CardID=BOT_312e
+D 14:11:05.0121026 GameState.DebugPrintPower() -         tag=ATTACHED value=3882
+D 14:11:05.0121026 GameState.DebugPrintPower() -         tag=CREATOR value=3882
