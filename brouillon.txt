@@ -167,3 +167,15 @@ D 14:11:05.0121026 GameState.DebugPrintPower() -         tag=ENTITY_ID value=388
 D 14:11:05.0121026 GameState.DebugPrintPower() -     SHOW_ENTITY - Updating Entity=3883 CardID=BOT_312e
 D 14:11:05.0121026 GameState.DebugPrintPower() -         tag=ATTACHED value=3882
 D 14:11:05.0121026 GameState.DebugPrintPower() -         tag=CREATOR value=3882
+
+
+
+BLOCK_START BlockType=TRIGGER Entity=[entityName=Faire
+TAG_CHANGE Entity=GameEntity tag=STEP value=MAIN_END
+
+
+TAG_CHANGE Entity=GameEntity tag=STEP value=MAIN_NEXT
+TAG_CHANGE Entity=GameEntity tag=STEP value=MAIN_READY
+TAG_CHANGE Entity=GameEntity tag=NEXT_STEP value=MAIN_CLEANUP     2896
+TAG_CHANGE Entity=GameEntity tag=STEP value=MAIN_READY    2920
+TAG_CHANGE Entity=GameEntity tag=NUM_TURNS_IN_PLAY value=3    2923

@@ -10,6 +10,9 @@ D 14:03:20.8593382 GameState.DebugPrintPower() -
     SubOption=-1
     TriggerKeyword=0
 
+    BLOCK_START BlockType=TRIGGER Entity=[entityName=Faire -> Debut
+    TAG_CHANGE Entity=GameEntity tag=STEP value=MAIN_END  -> fin de la preparation du board
+
 Detection de creation d'entity:
 D 14:00:41.9717618 GameState.DebugPrintPower() -
     FULL_ENTITY - Creating ID=XXX CardID=EX1_531 (-> voir id cards)
